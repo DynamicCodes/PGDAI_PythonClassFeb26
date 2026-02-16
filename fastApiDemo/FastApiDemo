@@ -1,0 +1,10 @@
+first install fastapi and uvicorn inside the vir. env
+
+to run inside fastApiDemo directory:-> uvicorn main:app --reload
+
+for swagger api:- already built in fastApi
+http://127.0.0.1:8000/docs  <- just use docs
+
+use SQLAlchemy <- it is python sql toll and object relational mapper
+
+pip install sqlalchemy psycopg2  <- postgres connector
