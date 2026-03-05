@@ -23,7 +23,7 @@ class C(B):    # multilevel
 
 
 
-class D(A,B):
+class D(B,A):
     def feature6(self):
         print("I am f6")
 
