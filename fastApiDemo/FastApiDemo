@@ -1,6 +1,29 @@
-first install fastapi and uvicorn inside the vir. env
+virtual environemnt command :- python -m venv myenv
+
+activate the environment :- copy the path and paste, for powershell .ps1 and cmd = .bat
+
+first install fastapi and uvicorn inside the vir. env => pip install fastapi uvicorn
+
+**  step 1:- create the main.py file and create the greet function .
+    import fastApi and create the object of it.
+
+    # add the get method in greet.
+
+**  step 2 :- usage of pydantic.
+    # create the get all products method for get method.
+
+**  step 3 :- create the models. with the constructor
+    in main.py import products,
+
+**  step 4 :- import baseModel from pydantic for data validation in models.
+
+
+** step 5 :- create the product_by_id method.
+
+** step 6:- create post method, add_product
 
 to run inside fastApiDemo directory:-> uvicorn main:app --reload
+
 
 for swagger api:- already built in fastApi
 http://127.0.0.1:8000/docs  <- just use docs

@@ -8,7 +8,7 @@ from database import database_models
 
 from sqlalchemy.orm import Session
 
-app = FastAPI()
+app = FastAPI()   # fastApi object after import
 
 # for CORS permission
 app.add_middleware(
@@ -43,9 +43,9 @@ def get_db():
     finally:
         db.close()
 
+# step 1 create the below function, import fastApi and make object
 
-
-@app.get("/")
+@app.get("/")   # this is a decorator, get api
 def greet():
     return "welcome to first app"
 
@@ -66,10 +66,13 @@ products = [
 ]
 
 
-
+# step 2, create the below for getting the products.
 
 @app.get("/products")
 def get_all_products(db: Session = Depends(get_db)):    # (db: Session = Depends(get_db) -> when use single db session to inject in the method
+    # for returning above products
+    # return products
+
     # create db session
     #db = session()
     # perform query
@@ -103,7 +106,7 @@ def add_product(product: Product, db: Session = Depends(get_db)):   # for db
     db.commit()
     return product
 '''
-# for locla list
+# for local list
 def add_product(product: Product):
     products.append(product)
     return product
