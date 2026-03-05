@@ -8,6 +8,11 @@
 from Easy.oops.inheritance import Mammal
 
 # duck typing
+#  Duck typing is a concept in Python where the type of the object doesn’t matter; what matters is whether the object has the required method or behavior.
+
+#The idea comes from the phrase:
+
+#"If it walks like a duck and quacks like a duck, it is a duck."
 '''
 class Pycharm:
     def execute(self):
