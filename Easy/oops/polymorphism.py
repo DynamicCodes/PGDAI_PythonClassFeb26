@@ -57,6 +57,7 @@ class Student:
 
 
     def __gt__(self, other): return self.m1 + self.m2 > other.m1 + other.m2
+    # The __gt__ in Python is a special method, also known as a "dunder" (double underscore) or magic method, that implements the greater-than operator (>). 
 
 
 
