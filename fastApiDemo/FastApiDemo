@@ -30,4 +30,21 @@ http://127.0.0.1:8000/docs  <- just use docs
 
 use SQLAlchemy <- it is python sql toll and object relational mapper
 
-pip install sqlalchemy psycopg2  <- postgres connector
+** step 7 :-  pip install sqlalchemy psycopg2  <- postgres connector
+** step 8 :-  create a database folder. create a db.py connection file
+
+** step 9 :- create product orm file in database folder, because model is pydantic and won't be recognized by DB
+
+import db files in main.py
+
+** step 10 :- create the database metadata line in main.py
+
+** step 11 : - create the init_db function for initializing db with dummy data
+
+ === **product.model_dump())  <- model dump is giving dictionary, but want to cenvert in db models, 
+                            so unpacking is required, so use **.
+
+** step 12 :-  deb db function for open and close connection
+
+** step 13 :- import session and injec in the methods
+
