@@ -48,3 +48,8 @@ import db files in main.py
 
 ** step 13 :- import session and injec in the methods
 
+** step 14 :- run frontEnd :- go to frontend folder.
+                            - npm install
+                            - npm start
+                            - add cors in main backend file for error.
+
