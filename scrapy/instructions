@@ -1,0 +1,28 @@
+pip install scrapy
+
+scrapy startproject booksscraper
+website :- https://books.toscrape.com/
+
+spider =>
+cd bookscraper
+scrapy genspider spiderName DomainToScrap(example.com)
+
+to crawl => scrapy crawl books
+
+copy the def start function from scrapy documentation
+to spider books.py file.
+
+
+----------------------------------------------------
+now update the urls with the required urls from books website
+now copy the filename save code from documentation
+then run scrapy crawl books = > will create 2 html containing files
+
+----------------------------------------------------
+instead of html we will get the content in the webistes
+
+write the a= response....    line for getting the data
+
+---------------------------------------------------
+
+
