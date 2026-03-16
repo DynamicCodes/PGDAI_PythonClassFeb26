@@ -3,7 +3,7 @@ import urllib.request
 #x = urllib.request.urlopen('https://www.google.com')
 #print(x.read())
 
-import urllib.parse
+from urllib.parse import urlparse
 from urllib import request
 
 '''
