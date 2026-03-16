@@ -27,3 +27,26 @@ class BooksSpider(scrapy.Spider):
         a = response.css(".product_pod").get()   # getall() for all products
 
         print(a)
+
+def parse(self, response):
+        # Select all book containers
+        books = response.css(".product_pod")
+
+        for book in books:
+            yield {
+                # The title is inside an <h3><a> tag's title attribute
+                'name': book.css("h3 a::attr(title)").get(),
+                
+                # Price is inside a <p> with class 'price_color'
+                'price': book.css(".price_color::text").get(),
+                
+                # Rating is a class name (e.g., "star-rating Three")
+                # We extract the second class name
+                'stars': book.css(".star-rating::attr(class)").get().replace("star-rating ", ""),
+                
+                # Stock status is inside a <p> with class 'instock availability'
+                'in_stock': book.css(".instock.availability::text").getall()[-1].strip(),
+                
+                # Link to the book's detail page
+                'url': response.urljoin(book.css("h3 a::attr(href)").get()),
+            }
